@@ -107,7 +107,7 @@
 <header>
   <div style="flex:1">
     <div class="tag">Gas Licuado</div>
-    <h1>Cálculo de Instalación — Proyecto</h1>
+    <h1>Cálculo de Instalación / Proyecto</h1>
     <span class="print-fecha" id="printFecha"></span>
   </div>
   <button class="btn-print" onclick="imprimir()">🖨 Imprimir / Guardar PDF</button>
@@ -258,18 +258,18 @@
         </div>
         <div></div>
         <div class="result-highlight">
-          <div class="unit">N1 — cilindros en servicio</div>
-          <div class="val" id="resN1">—</div>
+          <div class="unit">N1 - cilindros en servicio</div>
+          <div class="val" id="resN1">-</div>
           <div class="unit">cantidad redondeada al par</div>
         </div>
         <div class="result-highlight">
-          <div class="unit">N2 — cilindros en reserva</div>
-          <div class="val" id="resN2">—</div>
+          <div class="unit">N2 - cilindros en reserva</div>
+          <div class="val" id="resN2">-</div>
           <div class="unit">cantidad redondeada al par</div>
         </div>
         <div class="result-box">
           <div class="unit">Total cilindros</div>
-          <div class="val" id="resTotalCil">—</div>
+          <div class="val" id="resTotalCil">-</div>
         </div>
       </div>
     </div>
@@ -304,7 +304,7 @@
         </div>
         <div class="result-box">
           <div class="unit">Período de almacenamiento</div>
-          <div class="val" id="resPeriodo">—</div>
+          <div class="val" id="resPeriodo">-</div>
           <div class="unit">días</div>
         </div>
         <div id="alertaEstanque" style="display:none" class="alerta">
@@ -346,7 +346,7 @@
       </div>
       <div class="leyenda">
         <div class="leyenda-item"><div class="dot" style="background:#d4edda;border:1px solid #1a6a2a"></div>ΔP aceptable</div>
-        <div class="leyenda-item"><div class="dot" style="background:#fff3cd;border:1px solid #cc6600"></div>ΔP elevada — revisar diámetro</div>
+        <div class="leyenda-item"><div class="dot" style="background:#fff3cd;border:1px solid #cc6600"></div>ΔP elevada / revisar diámetro</div>
       </div>
     </div>
   </div>
@@ -498,7 +498,7 @@ function calcularEstanque() {
   const periodo = volNom / (Ve / 1) * 1; // días de autonomía
   const autonomia = (volNom * PODER_CAL * DENS_GLP * LLENADO * 1000) / consumoDiario;
 
-  document.getElementById('resPeriodo').textContent = isFinite(autonomia) ? autonomia.toFixed(1) : '—';
+  document.getElementById('resPeriodo').textContent = isFinite(autonomia) ? autonomia.toFixed(1) : '-';
   const alerta = document.getElementById('alertaEstanque');
   alerta.style.display = ratio > 1 ? 'block' : 'none';
 }
